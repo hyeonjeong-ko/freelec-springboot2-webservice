@@ -5,7 +5,7 @@
 - 모든 세팅을 최신 버전으로 적용하여 작업하였음을 알려드립니다.
 
 ## Project
-- OS : Mac OS
+- OS : Windows OS
 - IntelliJ IDEA 2023.1
 - Java : 17LTS
 - Spring Boot : 3.0.5
