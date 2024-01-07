@@ -19,7 +19,7 @@ script:
   - ./gradlew clean build
 
 before_deploy:
-  - zip -r springboot-webservice-project
+  - zip -r springboot-webservice3-project
   - mkdir -p deploy
   - mv springboot-webservice-project.zip deploy/springboot-webservice-project.zip
 
@@ -33,7 +33,8 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
-    
+    on:
+      branch: main
 # CI 실행 완료 시 메일로 알림
 notifications:
   email:
