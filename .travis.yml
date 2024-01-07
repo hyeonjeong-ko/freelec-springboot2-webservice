@@ -12,10 +12,8 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
     
-before_install:
-  - chmod +x gradlew  # Ensure the gradlew script is executable
-
 script:
+  - chmod +x gradlew
   - ./gradlew clean build  # Execute the build
 
 # CI 실행 완료 시 메일로 알림
