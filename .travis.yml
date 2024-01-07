@@ -19,9 +19,9 @@ script:
   - ./gradlew clean build
 
 before_deploy:
-  - zip -r springboot-webservice3-project
+  - zip -r springboot-webservice3-project *
   - mkdir -p deploy
-  - mv springboot-webservice-project.zip deploy/springboot-webservice-project.zip
+  - mv springboot-webservice-project.zip deploy/springboot-webservice-project.zip *
 
 deploy:
   - provider: s3
