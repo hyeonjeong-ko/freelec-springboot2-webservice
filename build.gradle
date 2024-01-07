@@ -7,6 +7,8 @@ plugins {
 group = 'springboot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+targetCompatibility = '17'
+
 
 repositories {
 	mavenCentral()
@@ -48,6 +50,9 @@ dependencies {
 
 	// spring session jdbc
 	implementation 'org.springframework.session:spring-session-jdbc'
+
+	// mariaDB
+	implementation("org.mariadb.jdbc:mariadb-java-client:2.1.2")
 }
 
 tasks.named('test') {
