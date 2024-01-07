@@ -21,7 +21,7 @@ script:
 before_deploy:
   - zip -r springboot-webservice3-project *
   - mkdir -p deploy
-  - mv springboot-webservice-project.zip deploy/springboot-webservice-project.zip *
+  - mv springboot-webservice3-project.zip deploy/springboot-webservice3-project.zip *
 
 deploy:
   - provider: s3
