@@ -35,6 +35,18 @@ deploy:
     wait-until-deployed: true
     on:
       branch: main
+      
+  - provider: codedeploy
+    assess_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: freelec-springboot-build-hj
+    key: springboot-webservice3-project.zip
+    bundle_type: zip
+    application: freelec-springboot3-webservice
+    deployment_group: freelec-springboot3-webservice-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+      
 # CI 실행 완료 시 메일로 알림
 notifications:
   email:
