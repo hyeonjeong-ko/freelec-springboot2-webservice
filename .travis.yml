@@ -46,6 +46,8 @@ deploy:
     deployment_group: freelec-springboot3-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
+    on:
+      branch: main
       
 # CI 실행 완료 시 메일로 알림
 notifications:
