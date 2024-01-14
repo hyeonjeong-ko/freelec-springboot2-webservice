@@ -5,11 +5,11 @@ PROJECT_NAME=freelec-springboot3-webservice
 
 echo "> Build 파일 복사"
 
-cp $REPOSITORY/ZIP/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동중인 어플리케이션 pid 확인"
 
-CURRENT_PID=$(pgrep -fl freelec-springboot3-webservice | grep springboot-webservice-1.0.1-SNAPSHOT.jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl springboot-webservice-1.0.1-SNAPSHOT.jar | awk '{print $1}')
 
 echo "> 현재 구동중인 어플리케이션 pid: $CURRENT_PID"
 
@@ -36,4 +36,4 @@ echo "> $JAR_NAME 실행"
 nohup java -jar \
   -Dspring.config.location=classpath:/application.yml,classpath:/application-real.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties\
   -Dspring.profiles.active=real \
-  springboot-webservice-1.0.1-SNAPSHOT.jar > $REPOSITORY/nohup.out 2>&1 &
+  /home/ec2-user/app/step2/springboot-webservice-1.0.1-SNAPSHOT.jar > $REPOSITORY/nohup.out 2>&1 &
