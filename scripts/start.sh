@@ -8,7 +8,7 @@ source ${ABSDIR}/profile.sh
 REPOSITORY=/home/ec2-user/app/step3
 PROJECT_NAME=freelec-springboot3-webservice
 
-echo "> Build 파일 복사"
+echo "> Build 파일 복사함"
 echo "cp $REPOSITORY/zip/*.jar $REPOSITORY/"
 
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
